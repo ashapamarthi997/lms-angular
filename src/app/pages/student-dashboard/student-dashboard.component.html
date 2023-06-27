@@ -11,55 +11,59 @@
     </div>
     <div class="row">
         <div class="col-md-4 mb-3">
-            <div class="card  text-white" style="background-image: radial-gradient(rgb(60, 86, 98) , rgb(213, 253, 16));">
+            <div class="card  text-white"
+                style="background-image: radial-gradient(rgb(60, 86, 98) , rgb(213, 253, 16));">
                 <div class="card-body text-center py-5">
                     <h1><i class="bi bi-person"></i></h1>
                     <h4>My Profile</h4>
                 </div>
                 <div class="card-footer ">
                     <!-- Button to Open the Modal -->
-                    <button type="button" class="d-flex text-white" data-bs-toggle="modal" data-bs-target="#my_profile_modal" 
-                                style="width: 100%;background-color: transparent; border:none">
+                    <button type="button" class="d-flex text-white" data-bs-toggle="modal"
+                        data-bs-target="#my_profile_modal"
+                        style="width: 100%;background-color: transparent; border:none">
                         View Details
                         <span class="ms-auto">
                             <i class="bi bi-chevron-right"></i>
-                        </span> 
+                        </span>
                     </button>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card text-white" style="background-image: radial-gradient(rgb(60, 86, 98) , rgb(42, 190, 253));">
+            <div class="card text-white"
+                style="background-image: radial-gradient(rgb(60, 86, 98) , rgb(42, 190, 253));">
                 <div class="card-body text-center py-5">
                     <h1><i class="bi bi-clipboard-check"></i></h1>
                     <h4>Reports</h4>
                 </div>
                 <div class="card-footer ">
                     <!-- Button to Open the Modal -->
-                    <button type="button" class="d-flex text-white" data-bs-toggle="modal" data-bs-target="#myModal" 
-                                style="width: 100%;background-color: transparent; border:none">
+                    <button type="button" class="d-flex text-white" data-bs-toggle="modal"
+                        data-bs-target="#report_modal" style="width: 100%;background-color: transparent; border:none">
                         View Details
                         <span class="ms-auto">
                             <i class="bi bi-chevron-right"></i>
-                        </span> 
+                        </span>
                     </button>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card text-white" style="background-image: radial-gradient(rgb(60, 86, 98) , rgb(176, 48, 255));">
+            <div class="card text-white"
+                style="background-image: radial-gradient(rgb(60, 86, 98) , rgb(176, 48, 255));">
                 <div class="card-body text-center py-5">
                     <h1><i class="bi bi-stack"></i></h1>
                     <h4>Credits</h4>
                 </div>
                 <div class="card-footer ">
                     <!-- Button to Open the Modal -->
-                    <button type="button" class="d-flex text-white" data-bs-toggle="modal" data-bs-target="#myModal" 
-                                style="width: 100%;background-color: transparent; border:none">
+                    <button type="button" class="d-flex text-white" data-bs-toggle="modal" data-bs-target="#credits_modal"
+                        style="width: 100%;background-color: transparent; border:none">
                         View Details
                         <span class="ms-auto">
                             <i class="bi bi-chevron-right"></i>
-                        </span> 
+                        </span>
                     </button>
                 </div>
             </div>
@@ -71,31 +75,87 @@
 
 <!-- My Profile Modal -->
 <div class="modal fade" id="my_profile_modal">
-    <div class="modal-dialog" >
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">My Profile</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">My Profile</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div>Full name : </div>
+                <div>Course : </div>
+                <div>Roll No. : </div>
+                <div>Gender : e</div>
+                <div>Date of birth : </div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div>Full name : Asha Pamarthi</div>
-          <div>Course : ECE</div>
-          <div>Roll No. : 16MQ1A0464</div>
-          <div>Gender : Female</div>
-          <div>Date of birth : 13th March 1997</div>
-          <div>Blood group : B+ve</div>
-          <div>Nationality : Indian</div>
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
     </div>
-  </div>
+</div>
+
+
+<!-- Report Modal -->
+<div class="modal fade" id="report_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Report</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <div> : </div>
+                <div> : </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Credits Modal -->
+<div class="modal fade" id="credits_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Credits</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+                <div> : </div>
+                <div> : </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
