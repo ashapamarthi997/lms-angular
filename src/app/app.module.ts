@@ -5,16 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { TemperatureComponent } from './component/temperature/temperature.component';
+import { StudentRegistrationComponent } from './pages/student-registration/student-registration.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    TemperatureComponent
+    TemperatureComponent,
+    StudentRegistrationComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
