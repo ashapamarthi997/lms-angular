@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { TemperatureComponent } from './component/temperature/temperature.component';
-import { MentorRegistrationComponent } from './component/mentor-registration/mentor-registration.component';
+import { MentorRegistrationComponent } from './pages/mentor-registration/mentor-registration.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { MentorRegistrationComponent } from './component/mentor-registration/men
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
