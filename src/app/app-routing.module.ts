@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { MentorRegistrationComponent } from './pages/mentor-registration/mentor-registration.component';
+import { MentorLoginComponent } from './pages/mentor-login/mentor-login.component';
 
 const routes: Routes = [
-  {path:'',component:WelcomeComponent},
-  {path:'mentor-registration',component:MentorRegistrationComponent}
+ {path:'',component:WelcomeComponent},
+ {path:'mentor-login',component:MentorLoginComponent}
   
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[WelcomeComponent,MentorRegistrationComponent]
+export const routingComponents=[WelcomeComponent,MentorLoginComponent]
