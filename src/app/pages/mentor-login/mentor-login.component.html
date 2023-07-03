@@ -1,0 +1,67 @@
+<div class="container py-5 h-100  style=background-color:lightblue;">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-4 col-lg-5 d-none d-md-block">
+                <img src="https://img.freepik.com/free-vector/intern-mentor-working-office_23-2148748138.jpg"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 20rem 20rem 1rem; height:100%">
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+  
+                  <form [formGroup]="logForm">
+  
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                      <span class="h1 fw-bold mb-0" style="color:royalblue">Login</span>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="email"  id="form2Example17" class="form-control form-control-lg" formControlName="email" placeholder="Email" />
+                      <div *ngIf="logForm.controls['email'].touched && logForm.controls['email']?.['errors']">
+                        <div *ngIf="logForm.controls['email']?.['errors']?.['required']" style="color:red;">
+                          *Email is required
+                        </div>
+                        <div *ngIf="logForm.controls['email']?.['errors']?.['email']" style="color:red;">
+                         *Enter valid email
+                        </div>
+                      </div>
+                   
+                    </div>
+  
+                    <div class="form-outline mb-4 ">
+                      <div class="field">
+                      <input [type]="showpassword ? 'text':'password'" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters"
+                       id="pswd"  class="form-control form-control-lg" formControlName="password"  placeholder="Password" />
+                      <i (click)="toggleshow()" class="bi bi-eye-slash-fill eye" *ngIf="!showpassword"></i>
+                      <i (click)="toggleshow()" class="bi bi-eye-fill eye" *ngIf="showpassword" ></i>
+                    </div>
+                      <div *ngIf="logForm.controls['password'].touched && logForm.controls['password']?.['errors']">
+                        <div *ngIf="logForm.controls['password']?.['errors']?.['required']" style="color:red;">
+                          *Password is required
+                        </div>
+
+                        <div *ngIf="logForm.controls['password']?.['errors']?.['minlength']" style="color:red;">
+                          *Password is minimum 8 characters
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="pt-1 mb-4">
+                      <button class="btn btn-primary btn-lg btn-block" type="button">Signin</button>
+                    </div>
+  
+                    <a class="small text-muted" href="#!">Forgot password?</a>
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? 
+                    <a href="#!" class= "fw-bold" style="color: #393f81;">Register here</a></p>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
