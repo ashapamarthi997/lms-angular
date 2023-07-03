@@ -1,0 +1,138 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <section class="vh-100" style="background-color: #eee;">
+
+<div class="container h-100" >
+      <div class=" card row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <!-- <div class="card text-black" style="border-radius: 25px;"> -->
+            <div class="card-body  p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1"> 
+                    <div class="container-register">
+                        
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registration</p>
+                  <form [formGroup]="regForm">
+                  <div class="forms">
+                    <div class="input-icons">
+                  <div class="form-group">
+                    <i class="bi bi-person-fill icons"></i>
+                    <input type="text" class="form-control" formControlName="firstName" placeholder="First Name" value="" />
+                    <div *ngIf="regForm.controls['firstName'].touched && regForm.controls['firstName']?.['errors']" class="inval">
+                        <div *ngIf="regForm.controls['firstName']?.['errors']?.['required']">
+                             * first name is required
+                        </div>
+                        <div *ngIf="regForm.controls['firstName']?.['errors']?.['minlength']">
+                              * first name  is minimum 5 characters
+                       </div>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <i class="bi bi-person-fill icons"></i>
+                    <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name" value="" />
+                    <div *ngIf="regForm.controls['lastName'].touched && regForm.controls['lastName']?.['errors']" class="inval">
+                        <div *ngIf="regForm.controls['lastName']?.['errors']?.['required']">
+                             * last name is required
+                        </div>
+                        <div *ngIf="regForm.controls['lastName']?.['errors']?.['minlength']">
+                              * last name  is minimum 5 characters
+                       </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <i class="bi bi-envelope-fill icons"></i>
+                    <input type="email" class="form-control" formControlName="email" placeholder="Your Email" value="" />
+                    <div *ngIf="regForm.controls['email'].touched && regForm.controls['email']?.['errors']" class="inval">
+                        <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+                             * email is required
+                        </div>
+                        <div *ngIf="regForm.controls['email']?.['errors']?.['email']">
+                              * please enter valid email
+                       </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <i class="bi bi-telephone-fill icons"></i>
+                    <input type="phonenumber" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" formControlName="phoneNumber" placeholder="Your Phone" value="" />
+                    <div *ngIf="regForm.controls['phoneNumber'].touched && regForm.controls['phoneNumber']?.['errors']" class="inval">
+                        <div *ngIf="regForm.controls['phoneNumber']?.['errors']?.['required']">
+                             * phone number is required
+                        </div>
+                        <div *ngIf="regForm.controls['phoneNumber']?.['errors']?.['pattern']">
+                              * please enter mobile number
+                       </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                  <i (click)="toggleshow()" class="bi bi-eye-slash eye" *ngIf="!showpassword"></i>
+                  <i (click)="toggleshow()" class="bi bi-eye  eye" *ngIf="showpassword" ></i>
+                  <i class="bi bi-lock-fill icons"></i>
+                    <input [type]="showpassword ? 'text':'password'" title="Password must be 8 characters including 1 uppercase letter,1 lowercase letter and numeric characters" class="form-control" formControlName="password" placeholder="Password" value="" />
+                    <div *ngIf="regForm.controls['password'].touched && regForm.controls['password']?.['errors']" class="inval">
+                        <div *ngIf="regForm.controls['password']?.['errors']?.['required']">
+                             * password is required
+                        </div>
+                        <div *ngIf="regForm.controls['password']?.['errors']?.['minlength']">
+                              * password is minimum 8 characters
+                       </div>
+                        </div>  
+                </div>
+                <div class="form-group">
+                  <i (click)="toggleshow1()" class="bi bi-eye-slash eye" *ngIf="!showpassword1"></i>
+                  <i (click)="toggleshow1()" class="bi bi-eye  eye" *ngIf="showpassword1" ></i>
+                  <i class="bi bi-lock-fill icons"></i>
+                    <input [type]="showpassword1 ? 'text':'password'" title="Password must be 8 characters including 1 uppercase letter,1 lowercase letter and numeric characters" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" value="" />
+                    <div *ngIf="regForm.controls['confirmPassword']?.['touched']" class="inval">
+                        <div *ngIf="regForm.controls['confirmPassword']?.['errors']?.['required']">
+                             
+                        </div>
+                        <!-- <div *ngIf="regForm.controls['confirmPassword']?.['errors']?.['minlength']">
+                              * password is minimum 8 characters
+                       </div> -->
+                       <div *ngIf="regForm['errors']?.['passwordsMatch']" class="inval">
+                        * passwords not matched
+                 </div>
+                        </div> 
+                      
+                </div>
+            
+                  </div>
+                  </div> 
+                <div class="form-group">
+                    <div class="maxl">
+                       <p>Gender</p>
+                        <label class="radio inline"> 
+                            <input type="radio" name="gender"  formControlName="gender"value="male" checked>
+                            <span> Male </span> 
+                        </label>
+                        <label class="radio-inline"> 
+                            <input type="radio" name="gender" formControlName="gender" value="female">
+                            <span> Female </span> 
+                        </label>
+                    </div>
+                </div>
+                <div class="inp ">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                    <label class="form-check-label" for="form2Example3">
+                      I agree all statements in <a href="#!">Terms of service</a>
+                    </label>
+
+                      <div class="form-group">
+                <input type="submit"  class="btnRegister" (click)="show()"  value="Register"/>
+                </div>
+              </div>
+                  </form>
+                    </div>
+                    
+                
+              </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2   ">
+  
+                  <img  src="../../assets/images4.jpeg " style="height: 550px; width: 500px; border-radius: 2px;"
+                    class="img-fluid" alt="Sample image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
