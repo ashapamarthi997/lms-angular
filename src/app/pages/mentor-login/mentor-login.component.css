@@ -1,0 +1,12 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.field{
+    position:relative;
+}
+.eye{
+    position:absolute;
+    bottom: 10px;
+    right:10px;
+    
+    
+}
